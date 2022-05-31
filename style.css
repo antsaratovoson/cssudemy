@@ -62,7 +62,7 @@ h1{
   transition:all 500ms cubic-bezier(0,.93,.32,1);
   ;
 }
-.box .box-1{
+.box-animation .box-1{
   position: absolute;
   width: 50px;
   height: 50px;
@@ -72,10 +72,66 @@ h1{
   transform: translate(-50%,-50%);
   background-color: #008000;
 }
-.box:hover{
+.box-animation:hover{
   transform:rotate(180deg);
   cursor: pointer;
 
   background-color: #fdbba2;
 }
 
+.content-transition{
+  padding: 15px;
+  width: 100%;
+  text-align: center;
+
+}
+
+#btn-animation{
+  padding: 15px 30px;
+  background-color: #ff7c4d;
+  color: #fff;
+  border: none;
+  width: 150px;
+  margin: 0 auto;
+
+  transition: all 500ms;
+}
+#btn-animation:hover{
+  cursor: pointer;
+  background-color: #ff7626;
+}
+.content-transition .box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  width: 50px;
+  height: 20px;
+  overflow: hidden;
+  background-color: #06f5dd;
+  
+  color: #000;
+  border-radius: 5px;
+  text-align: center;
+  margin: 20px auto;
+
+  transition:
+  background-color 0.5s 0s,
+  width 0.5s 0.5s,
+  height 0.5s 1s,
+  transform 0.5s 1s;
+}
+.paragraphe-animation{
+transform: translateX(-400px);
+}
+
+.content-transition .box.animation{
+  width: 150px;
+  height: 70px;
+  background-color: #00897b;
+}
+
+.paragraphe-animation.animation{
+  transition : transform 0.5s 1s ease-in;
+  transform: translateX(0px);
+}
